@@ -1,14 +1,27 @@
-const bookApp = (state = {}, action) => {
+let initialState = {
+	books: [
+		{
+			title: 'hello',
+			id: 0
+		}
+	]
+}
+
+const bookApp = (state = initialState, action) => {
 	switch (action.type) {
+
 		case 'ADD_BOOK':
+		
 			return Object.assign({}, state, {
 				books: [
 					...state.books,
 					{
-						title: action.title
+						title: action.books.title,
+						id: action.books.id
 					}
 				]
 			})
+
 		case 'EDIT_BOOK':
 			return Object.assign({}, state, {
 				books: state.books.map((book, index) => {
@@ -21,6 +34,7 @@ const bookApp = (state = {}, action) => {
 					return book
 				})
 			})
+
 		case 'REMOVE_BOOK':
 			return Object.assign({}, state, {
 				books: state.books.filter((book, index) => {

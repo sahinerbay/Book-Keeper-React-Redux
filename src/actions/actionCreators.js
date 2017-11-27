@@ -2,7 +2,7 @@ const ADD_BOOK = 'ADD_BOOK'
 const EDIT_BOOK = 'EDIT_BOOK'
 const REMOVE_BOOK = 'REMOVE_BOOK'
 
-let bookId = 0;
+let bookId = 1;
 
 export function addBook(title) {
 	return {
@@ -32,7 +32,3 @@ export function removeBook(id) {
 		}
 	}
 }
-
-export const addBook = makeActionCreator(ADD_BOOK, 'title')
-export const editBook = makeActionCreator(EDIT_BOOK, 'id', 'title')
-export const removeBook = makeActionCreator(REMOVE_BOOK, 'id')

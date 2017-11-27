@@ -3,7 +3,7 @@ import BookList from '../components/bookList';
 import { editBook, removeBook } from '../actions/actionCreators';
 
 const mapStateToProps = state => {
-	console.log(state)
+	
 	return {
 		books: state.books
 	}

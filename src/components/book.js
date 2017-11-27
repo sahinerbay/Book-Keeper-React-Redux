@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Book = ({book}) => {
-	console.log(book)
+const Book = ({ title, id }) => {
+	
 	return (
-		<div>
-			<li>{book.title}</li>
-		</div>
+		<li>{title}</li>
 	);
 };
 

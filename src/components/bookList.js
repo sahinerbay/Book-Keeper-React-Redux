@@ -5,9 +5,8 @@ const BookList = ({ books, onEditBook, onRemoveBook }) => {
 	return (
 		<ul>
 			{books.map(book => {
-				
 				return (
-					<Book key={book.id} book = {book}/>
+					<Book key={book.id} {...book}/>
 				)
 			})}
 

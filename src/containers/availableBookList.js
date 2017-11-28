@@ -9,8 +9,6 @@ const mapStateToProps = state => {
 	}
 }
 
-
-
 const availableBookList = connect(
 	mapStateToProps,
 	null

@@ -4,11 +4,11 @@ import { removeBook } from '../actions/actionCreators';
 import  DeleteButton from '../components/deleteButton';
 
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, ownProps) => {
 	
 	return {
-		onRemoveBook: id => {
-			dispatch(removeBook(id))
+		onRemoveBook: () => {
+			dispatch(removeBook(ownProps.bookId))
 		}
 	}
 }

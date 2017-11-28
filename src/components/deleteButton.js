@@ -1,11 +1,10 @@
 import React from 'react';
-import RemoveBook from '../containers/removeBook';
 
-const DeleteButton = ({ onRemoveBook, bookId }) => {
+const DeleteButton = ({ onRemoveBook }) => {
 
 	return (
 			<button className="close" onClick={() => {
-				onRemoveBook(bookId)
+				onRemoveBook()
 			}}><span>&times;</span></button>
 	);
 };

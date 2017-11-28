@@ -1,9 +1,9 @@
 import React from 'react';
 import Book from './book';
 
-const BookList = ({ books, onEditBook, onRemoveBook }) => {
+const BookList = ({ books }) => {
 	return (
-		<ul>
+		<ul className="list-group">
 			{books.map(book => {
 				return (
 					<Book key={book.id} {...book}/>

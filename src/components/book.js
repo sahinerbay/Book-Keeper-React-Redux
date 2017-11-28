@@ -1,9 +1,12 @@
 import React from 'react';
+import RemoveBook from '../containers/removeBook';
 
 const Book = ({ title, id }) => {
-	
+
 	return (
-		<li>{title}</li>
+		<li className="list-group-item">
+			{title}<RemoveBook bookId={id} />
+		</li>
 	);
 };
 

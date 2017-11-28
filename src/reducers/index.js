@@ -11,7 +11,7 @@ const bookApp = (state = initialState, action) => {
 	switch (action.type) {
 
 		case 'ADD_BOOK':
-		
+
 			return Object.assign({}, state, {
 				books: [
 					...state.books,
@@ -37,11 +37,10 @@ const bookApp = (state = initialState, action) => {
 
 		case 'REMOVE_BOOK':
 			return Object.assign({}, state, {
-				books: state.books.filter((book, index) => {
-					if (index !== action.index) {
-						return Object.assign({}, book)
-					}
-				})
+				books:
+					state.books.filter((book) => {
+						return book.id !== action.books.id
+					})
 			})
 		default:
 			return state

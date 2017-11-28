@@ -9,20 +9,11 @@ const mapStateToProps = state => {
 	}
 }
 
-const mapDispatchToProps = dispatch => {
-	return {
-		onEditBook: (title, id) => {
-			dispatch(editBook(title, id))
-		},
-		onRemoveBook: id => {
-			dispatch(removeBook(id))
-		}
-	}
-}
+
 
 const availableBookList = connect(
 	mapStateToProps,
-	mapDispatchToProps
+	null
 )(BookList)
 
 export default availableBookList

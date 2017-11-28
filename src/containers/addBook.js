@@ -7,7 +7,7 @@ let AddBook = ({ dispatch }) => {
 
 	return (
 		<div>
-			<form
+			<form className="form-inline"
 				onSubmit={e => {
 					e.preventDefault();
 					if (!input.value.trim()) {
@@ -18,12 +18,12 @@ let AddBook = ({ dispatch }) => {
 					input.value = ''
 				}}
 			>
-				<input
+				<input className="form-control"
 					ref={node => {
 						input = node
 					}}
 				/>
-				<button type="submit">
+				<button className="btn btn-success pull-right" type="submit">
 					Add Books
         </button>
 			</form>

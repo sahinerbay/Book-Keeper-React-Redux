@@ -8,3 +8,33 @@ body {
 	float: none;
 	margin: 0 auto;
 }
+
+h1, h2 {
+	text-align: center;
+}
+
+h2 {
+	font-size: 27px;
+	text-decoration: underline;
+}
+
+.media > div {
+	border: 1px solid #ccc;
+}
+
+.media-left {
+	width: 40px;
+	height: 40px;
+	font-size: 2vw;
+	border-right: 1px solid #ccc;
+	text-align: center;
+	padding: 5px;
+}
+
+.media-body {
+	padding: 5px 10px;
+}
+
+.text-danger {
+	text-align: center;
+}

@@ -2,13 +2,14 @@ const ADD_BOOK = 'ADD_BOOK'
 const EDIT_BOOK = 'EDIT_BOOK'
 const REMOVE_BOOK = 'REMOVE_BOOK'
 
-let bookId = 1;
+let bookId = 2;
 
-export function addBook(title) {
+export function addBook(title, description) {
 	return {
 		type: ADD_BOOK,
 		books: {
 			title,
+			description,
 			id: bookId++
 		}
 	}

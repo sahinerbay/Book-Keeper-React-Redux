@@ -1,8 +1,9 @@
 let initialState = {
 	books: [
 		{
-			title: 'hello',
-			id: 0
+			title: 'Istanbul: Memories and the City by Orhan Pamuk',
+			description: 'Istanbul: Memories and the City is a largely autobiographical memoir by Orhan Pamuk that is deeply melancholic.',
+			id: 1
 		}
 	]
 }
@@ -17,6 +18,7 @@ const bookApp = (state = initialState, action) => {
 					...state.books,
 					{
 						title: action.books.title,
+						description: action.books.description,
 						id: action.books.id
 					}
 				]

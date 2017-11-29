@@ -15,16 +15,6 @@ export function addBook(title, description) {
 	}
 }
 
-export function editBook(title, id) {
-	return {
-		type: EDIT_BOOK,
-		books: {
-			title,
-			id
-		}
-	}
-}
-
 export function removeBook(id) {
 	return {
 		type: REMOVE_BOOK,
